@@ -4,7 +4,7 @@ eureka:
   client:
     register-with-eureka: true
     service-url:
-      default-zone: https://app-referencia.herokuapp.com
+      default-zone: ${EUREKA_SERVERS}
   instance:
     instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
 spring:
