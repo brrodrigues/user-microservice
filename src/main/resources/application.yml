@@ -1,0 +1,18 @@
+server:
+  port: 0
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      default-zone: https://app-referencia.herokuapp.com
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+spring:
+  application:
+    name: user-microservice
+debug: true
+hystrix:
+  metrics:
+    enabled: true
+
+
