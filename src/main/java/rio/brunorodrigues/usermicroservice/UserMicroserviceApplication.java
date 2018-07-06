@@ -19,6 +19,7 @@ public class UserMicroserviceApplication {
 
     public static void main(String[] args) {
         LOGGER.info("************************************************************** env : {}", System.getenv());
+        LOGGER.info("************************************************************** properties : {}", System.getProperties());
         SpringApplication.run(UserMicroserviceApplication.class, args);
 
     }
