@@ -4,7 +4,7 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_SERVERS:http://localhost:8756}
   instance:
-    instance-id: ${hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    instance-id: ${web-url}:${spring.application.name}:${server.port}
 spring:
   application:
     name: user-microservice
