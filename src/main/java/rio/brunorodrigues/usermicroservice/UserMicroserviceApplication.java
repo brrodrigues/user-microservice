@@ -14,11 +14,13 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableHystrix
 public class UserMicroserviceApplication {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(UserMicroserviceApplication.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserMicroserviceApplication.class);
 
 
     public static void main(String[] args) {
+        LOGGER.info("************************************************************** env : {}", System.getenv());
         SpringApplication.run(UserMicroserviceApplication.class, args);
+
     }
 
 }

@@ -4,9 +4,9 @@ eureka:
   client:
     register-with-eureka: true
     serviceUrl:
-      defaultZone: ${EUREKA_SERVERS}
+      defaultZone: ${EUREKA_SERVERS:https://app-referencia}
   instance:
-    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 spring:
   application:
     name: user-microservice
